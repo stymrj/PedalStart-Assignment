@@ -1,0 +1,128 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e0f7fa;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #0dc213;
+}
+
+.task-form-container, .task-list-container {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #19c842;
+}
+
+#task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#task-form input, #task-form button {
+    padding: 10px;
+    border: 1px solid #86f748;
+    border-radius: 4px;
+}
+
+#task-form input {
+    background-color: #e0f7fa;
+}
+
+#task-form button {
+    background-color: #0dcf51;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#task-form button:hover {
+    background-color: #1adb74;
+}
+
+#task-list .task {
+    padding: 10px;
+    border: 1px solid #1ed169;
+    border-radius: 4px;
+    margin-top: 10px;
+    background-color: #b2dfdb;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+#task-list .task:hover {
+    transform: scale(1.05); /* Enlarge on hover */
+    z-index: 1; /* Bring the hovered task to the front */
+}
+
+#task-list .task strong {
+    color: #17ce88;
+}
+
+#task-list .task .task-details {
+    margin-top: 10px;
+    display: none;
+    padding: 10px;
+    background-color: #e0f7fa;
+    border-radius: 4px;
+    border: 1px solid #30dc52;
+    position: relative;
+    z-index: 1; /* Ensure the description is on top */
+}
+
+#task-list .task:hover .task-details {
+    display: block; /* Show details on hover */
+}
+
+#task-list .task .task-actions {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+}
+
+#task-list .task button {
+    background-color: #19cc46;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+#task-list .task button:hover {
+    background-color: #1cd152;
+}
+
+.show-details-button {
+    background-color: #25d036;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px 10px;
+    width: 100px; /* Adjust width as needed */
+    margin-left: 5px;
+}
+
+.show-details-button:hover {
+    background-color: #004d40;
+}
